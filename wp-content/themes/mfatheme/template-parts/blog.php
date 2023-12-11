@@ -2,11 +2,11 @@
     <div class="listado-flex">
         <div class="listado-flex-info">
             <p> <?php the_field('fecha_post'); ?></p>
-            <a href="<?php the_permalink();?>"  class="enlace-img dark:text-blue-500 hover:no-underline"  data-popover-target="popover-image">  <h4>  
+            <a href="<?php the_permalink();?>">  <h4>  
                     <?php
                     the_title();
                     ?>
-                </h4>
+                </h4>  
             </a> 
         </div>
         <div class="listado-flex-img">
