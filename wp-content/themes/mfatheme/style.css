@@ -1,0 +1,213 @@
+/*
+Theme Name: Tema de Matias Fernando Amador
+Author: Matias Fernando Amador Medina
+Author URI: https://www.instagram.com/matiferamador/
+Description: Personal Page 
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: Flexbox, css grid, mobile first. 
+Text Domain: mfa
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    /* COLORES */
+    --primario: #AEF6C7;
+    --secundario:#5B8266;
+    --terciario: #294936;
+    --cuarto:#3E6259;
+    --bg: #0d1411;
+
+    /* FUETES  */
+
+    --fuentePrincipal: 'Inter', sans-serif;
+
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+
+body {
+    background-color: var(--bg);
+    font-family: var(--fuentePrincipal);
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 2; 
+
+}
+
+/** Headings **/
+h1, h2, h3, h4 {
+    font-family: var(--fuentePrincipal);
+    margin: 0 0 5rem 0;
+    line-height: 1.2;
+    margin: 0;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4.8rem;
+  
+    color: var(--primario);
+    
+}
+h3 {
+    font-size: 3.6rem;
+    color: var(--cuarto);
+
+}
+h4 {
+    font-size: 2.2rem;
+    color: var(--cuarto);
+}
+
+/** Globales **/
+p {
+    margin: 0;
+    color: var(--secundario);
+}
+a {
+    text-decoration: none;
+    color: var(--secundario);
+}
+a:hover {
+    color:var(--primario);
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+   list-style: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.listado-flex img
+{
+    width: 96px;
+    height: 96px;
+}
+.contenedor {
+    width: min(90%, 70rem);
+    margin: 0 auto;
+}
+
+/* header  */
+
+
+.barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-principal ul {
+    display: flex;
+    gap: 4rem;
+    color: var(--secundario);
+}
+
+
+.info-page {
+    padding-top: 6rem;
+}
+
+/* sobremi */
+.mySwiper {
+    padding-bottom: 5rem;
+}
+@media(min-width:768px )
+{
+    .mySwiper {
+        padding-top: 5rem;
+       max-width: 55%;
+        display: inline-block;
+    }
+
+}
+
+.contacto-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 0 10rem 0;
+}
+
+.contacto-grid-bg{
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+    margin: 0;
+    border: 1px solid var(--secundario);
+
+}
+
+
+@media(min-width:768px)
+{
+    .contacto-grid {
+    flex-direction: row;
+    justify-content: start;
+    gap: 12rem;
+}
+}
+.contacto-card{
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+   
+
+    
+}
+
+
+/* blog */
+
+.info-page-p {
+    color: var(--primario);
+    margin-bottom: 3rem;
+}
+.imagen-blog {
+    max-width: 60%;
+}
+
+.listado-flex {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@media (min-width:768px) {
+    .listado-flex {
+        display: block;
+}
+.listado-flex-info {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+
+}
+.listado-flex-info h4:hover{
+    color: var(--secundario);
+    cursor: pointer;
+}
+.listado-flex-img {
+    display: none;
+}
+
+} 
+
+
