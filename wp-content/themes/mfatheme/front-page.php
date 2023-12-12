@@ -26,11 +26,8 @@ get_header();
     <section class="info-page">
     <?php 
             while (have_posts()): the_post();
-           
                 the_content();
             endwhile;
             ?>
     </section>
-  
-
 </main>
