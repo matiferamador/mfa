@@ -10,7 +10,10 @@
             </a> 
         </div>
         <div class="listado-flex-img">
-        <?php the_post_thumbnail( ['class' => 'imagen-blog', 'alt' => 'Imagen de blog']); ?>
+            <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail( ['class' => 'imagen-blog', 'alt' => 'Imagen de blog']); ?>
+        
+        </a>
 
         </div>   
     </div>

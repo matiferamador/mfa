@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   // Verifica si el elemento con la clase .mySwiper existe
   if (document.querySelector('.mySwiper')) {

@@ -6,9 +6,7 @@ get_header();
     <h2>Blog</h2>
     <p>Mi dia a dia, codigo, diseño y mas...</p>
     </section>
-    <section class="info-page">
-    <p class="info-page-p">Ultimos posts</p>
-        
+    <section class="info-page">       
         <?php 
         while (have_posts()) {
             the_post();

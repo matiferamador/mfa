@@ -112,15 +112,34 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-.menu-principal ul {
+
+.bg-gray-900 
+{
+border-radius: .5rem;
+}
+@media(min-width:768px  )
+
+{
+    .menu-principal ul {
     display: flex;
     gap: 4rem;
     color: var(--secundario);
+}
+.bg-gray-900 
+{
+background-color: var(--bg);
+
+}
+
+
 }
 
 
 .info-page {
     padding-top: 6rem;
+}
+.info-page h3 {
+    color: var(--primario);
 }
 
 /* sobremi */
@@ -211,3 +230,25 @@ img {
 } 
 
 
+/* home  */
+
+.grid-info-perfil {
+    display: grid;
+    grid-template-columns:.4fr 1fr ;
+    align-items: center;
+    gap: 2rem;
+}
+.grid-info-perfil img {
+    border-radius: 50%;
+    max-width: 15rem;
+}
+
+
+.grid-info-perfil-icons a {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.grid-info-perfil-icons p:hover {
+color: var(--primario);
+}
