@@ -33,5 +33,46 @@ function mfa_scripts_styles () {
 };
 add_action ('wp_enqueue_scripts', 'mfa_scripts_styles');
 
+// Registrar un tipo de entrada personalizado para Proyectos
+function registrar_tipo_proyecto() {
+    $labels = array(
+        'name'               => _x( 'Proyectos', 'Nombre general del tipo de entrada', 'textdomain' ),
+        'singular_name'      => _x( 'Proyecto', 'Nombre singular del tipo de entrada', 'textdomain' ),
+        'menu_name'          => _x( 'Proyectos', 'Nombre en el menú de administración', 'textdomain' ),
+        'name_admin_bar'     => _x( 'Proyecto', 'Nombre en la barra de administración', 'textdomain' ),
+        'add_new'            => _x( 'Añadir Nuevo', 'Proyecto', 'textdomain' ),
+        'add_new_item'       => __( 'Añadir Nuevo Proyecto', 'textdomain' ),
+        'new_item'           => __( 'Nuevo Proyecto', 'textdomain' ),
+        'edit_item'          => __( 'Editar Proyecto', 'textdomain' ),
+        'view_item'          => __( 'Ver Proyecto', 'textdomain' ),
+        'all_items'          => __( 'Todos los Proyectos', 'textdomain' ),
+        'search_items'       => __( 'Buscar Proyectos', 'textdomain' ),
+        'parent_item_colon'  => __( 'Proyecto Padre:', 'textdomain' ),
+        'not_found'          => __( 'Ningún proyecto encontrado.', 'textdomain' ),
+        'not_found_in_trash' => __( 'Ningún proyecto encontrado en la papelera.', 'textdomain' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'proyectos' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-editor-code', // Clase Dashicons para el icono de código
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+    );
+
+    register_post_type( 'proyecto', $args );
+}
+
+add_action( 'init', 'registrar_tipo_proyecto' );
+
+
 
 
