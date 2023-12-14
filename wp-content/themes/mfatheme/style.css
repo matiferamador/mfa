@@ -92,11 +92,7 @@ img {
     max-width: 100%;
     height: auto;
 }
-.listado-flex img
-{
-    width: 96px;
-    height: 96px;
-}
+
 .contenedor {
     width: min(90%, 70rem);
     margin: 0 auto;
@@ -197,7 +193,6 @@ background-color: var(--bg);
 .imagen-blog {
     max-width: 60%;
 }
-
 .listado-flex {
     display: flex;
     gap: 2rem;
@@ -205,6 +200,12 @@ background-color: var(--bg);
     justify-content: space-between;
     padding-top: 2rem;
     padding-bottom: 2rem;
+}
+
+@media (max-width:768px ){
+    .imagen-blog-desktop {
+        display: none;
+    }
 }
 
 @media (min-width:768px) {

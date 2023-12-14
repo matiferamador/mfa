@@ -26,13 +26,15 @@
     <div class="swiper-pagination"></div>
     
 </div>
-
+<section>
 <?php 
         get_template_part('template-parts/pagina')
         ?>
 
+</section>
 
-<section>
+
+<section> 
     <div class="contacto-grid">
         <div class="contacto-grid-bg">
             <a href="mailto:amadormatias1999@gmail.com">

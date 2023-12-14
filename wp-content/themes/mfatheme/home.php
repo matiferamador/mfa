@@ -2,7 +2,7 @@
 get_header();
 ?>
 <main class="contenedor">
-    <section class="info-page">
+    <section class="info-page ">
     <h2>Blog</h2>
     <p>Mi dia a dia, codigo, diseño y mas...</p>
     </section>
@@ -24,5 +24,8 @@ get_header();
     </div>
 
 </main>
+
+
+
     
 
