@@ -13,7 +13,7 @@
         </div>
         <div class="listado-flex-img">
             <a href="<?php the_permalink(); ?>">
-                <?php the_post_thumbnail(['class' => 'imagen-blog', 'alt' => 'Imagen de blog']); ?>
+                <?php the_post_thumbnail('thumbnail'); ?>
             </a>
         </div>
     </div>
