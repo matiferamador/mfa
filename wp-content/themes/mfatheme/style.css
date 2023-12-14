@@ -277,7 +277,7 @@ color: var(--primario);
     padding-bottom:3rem;
 }
 .proyectos img {
-    border-radius: .5rem;
+    border-radius: .7rem;
 }
 .proyectos h4 {
     color: var(--primario);
@@ -298,4 +298,9 @@ color: var(--primario);
     
 }
 
-
+.proyecto-contenido-title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  
+}
