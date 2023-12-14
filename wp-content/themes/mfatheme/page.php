@@ -1,7 +1,11 @@
 <?php 
+get_header() 
+?>
+<main class="contenedor info-page">
+            <?php 
             while (have_posts()): the_post();
                 the_content();
-                the_post_thumbnail();
             endwhile;
             ?>
-        
+            <?php mostrar_proyectos() ?>
+</main>

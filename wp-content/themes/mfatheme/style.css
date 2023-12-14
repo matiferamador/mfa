@@ -55,9 +55,7 @@ h1 {
 }
 h2 {
     font-size: 4.8rem;
-  
     color: var(--primario);
-    
 }
 h3 {
     font-size: 3.6rem;
@@ -66,7 +64,7 @@ h3 {
 }
 h4 {
     font-size: 2.2rem;
-    color: var(--cuarto);
+    color: var(--primario);
 }
 
 /** Globales **/
@@ -241,7 +239,13 @@ background-color: var(--bg);
 .grid-info-perfil img {
     border-radius: 50%;
     max-width: 15rem;
+
 }
+.grid-info-perfil_img img {
+  background-color:var(--terciario);
+
+}
+
 
 
 .grid-info-perfil-icons a {
@@ -261,3 +265,37 @@ color: var(--primario);
     align-items: center;
     gap: 2rem;
 }
+
+
+/* Page Proyectos  */
+
+.listado-proyectos {
+    margin-top: 5rem;
+}
+
+.proyectos {
+    padding-bottom:3rem;
+}
+.proyectos img {
+    border-radius: .5rem;
+}
+.proyectos h4 {
+    color: var(--primario);
+    margin: 1rem 0;
+}
+
+@media(min-width: 768px) {
+    .proyectos {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .proyectos h4 {
+        color: var(--primario);
+        margin: 0;
+    }
+    
+}
+
+

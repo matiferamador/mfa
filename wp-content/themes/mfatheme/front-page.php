@@ -8,8 +8,8 @@ get_header();
     </section>
     <section class="info-page"> 
         <div class="grid-info-perfil">
-            <div>  
-                <img src=" <?php echo get_template_directory_uri(); ?>/img/perfil.jpg" alt="logotipo">
+            <div class="grid-info-perfil_img">  
+                <img src=" <?php echo get_template_directory_uri(); ?>/img/memoji.png" alt="logotipo">
             </div>
             <div class="grid-info-perfil-icons">
                     <a href="https://github.com/matiferamador">

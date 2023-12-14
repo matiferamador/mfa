@@ -1,4 +1,7 @@
+
 <?php
+require get_template_directory() . '/includes/queries.php';
+
 function mfa_setup() {
     // Imagenes Destacadas
     add_theme_support('post-thumbnails');
@@ -33,23 +36,28 @@ function mfa_scripts_styles () {
 };
 add_action ('wp_enqueue_scripts', 'mfa_scripts_styles');
 
-// Registrar un tipo de entrada personalizado para Proyectos
+
+
+
+
+
+// Registrar el tipo de entrada personalizado
 function registrar_tipo_proyecto() {
     $labels = array(
-        'name'               => _x( 'Proyectos', 'Nombre general del tipo de entrada', 'textdomain' ),
-        'singular_name'      => _x( 'Proyecto', 'Nombre singular del tipo de entrada', 'textdomain' ),
-        'menu_name'          => _x( 'Proyectos', 'Nombre en el menú de administración', 'textdomain' ),
-        'name_admin_bar'     => _x( 'Proyecto', 'Nombre en la barra de administración', 'textdomain' ),
-        'add_new'            => _x( 'Añadir Nuevo', 'Proyecto', 'textdomain' ),
-        'add_new_item'       => __( 'Añadir Nuevo Proyecto', 'textdomain' ),
-        'new_item'           => __( 'Nuevo Proyecto', 'textdomain' ),
-        'edit_item'          => __( 'Editar Proyecto', 'textdomain' ),
-        'view_item'          => __( 'Ver Proyecto', 'textdomain' ),
-        'all_items'          => __( 'Todos los Proyectos', 'textdomain' ),
-        'search_items'       => __( 'Buscar Proyectos', 'textdomain' ),
-        'parent_item_colon'  => __( 'Proyecto Padre:', 'textdomain' ),
-        'not_found'          => __( 'Ningún proyecto encontrado.', 'textdomain' ),
-        'not_found_in_trash' => __( 'Ningún proyecto encontrado en la papelera.', 'textdomain' )
+        'name'               => _x( 'Proyectos', 'Nombre general de la entrada personalizada', 'text-domain' ),
+        'singular_name'      => _x( 'Proyecto', 'Nombre singular de la entrada personalizada', 'text-domain' ),
+        'menu_name'          => _x( 'Proyectos', 'Nombre en el menú', 'text-domain' ),
+        'name_admin_bar'     => _x( 'Proyecto', 'Nombre en la barra de administración', 'text-domain' ),
+        'add_new'            => _x( 'Agregar Nuevo', 'Proyecto', 'text-domain' ),
+        'add_new_item'       => __( 'Agregar Nuevo Proyecto', 'text-domain' ),
+        'new_item'           => __( 'Nuevo Proyecto', 'text-domain' ),
+        'edit_item'          => __( 'Editar Proyecto', 'text-domain' ),
+        'view_item'          => __( 'Ver Proyecto', 'text-domain' ),
+        'all_items'          => __( 'Todos los Proyectos', 'text-domain' ),
+        'search_items'       => __( 'Buscar Proyectos', 'text-domain' ),
+        'parent_item_colon'  => __( 'Proyecto Padre:', 'text-domain' ),
+        'not_found'          => __( 'Proyectos no encontrados.', 'text-domain' ),
+        'not_found_in_trash' => __( 'Proyectos no encontrados en la papelera.', 'text-domain' ),
     );
 
     $args = array(
@@ -59,20 +67,14 @@ function registrar_tipo_proyecto() {
         'show_ui'            => true,
         'show_in_menu'       => true,
         'query_var'          => true,
-        'rewrite'            => array( 'slug' => 'proyectos' ),
+        'rewrite'            => array( 'slug' => 'proyecto' ),
         'capability_type'    => 'post',
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => null,
-        'menu_icon'          => 'dashicons-editor-code', // Clase Dashicons para el icono de código
-        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
     );
 
     register_post_type( 'proyecto', $args );
 }
-
 add_action( 'init', 'registrar_tipo_proyecto' );
-
-
-
-
