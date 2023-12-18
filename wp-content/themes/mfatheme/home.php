@@ -17,9 +17,10 @@ get_header();
     </section>
     <div class="pagination-container">
         <?php the_posts_pagination(array(
-            'mid_size' => 2,
+            'mid_size' => 3,
             'prev_text' => '&laquo;',
             'next_text' => '&raquo;',
+            'screen_reader_text' => __( 'Navegación de Blog ', 'textdomain' ),
         )); ?>
     </div>
 

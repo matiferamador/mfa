@@ -258,7 +258,7 @@ background-color: var(--bg);
 color: var(--primario);
 }
 
-/* front page  */
+/* frontend */
 
 .contenedor-boton {
     margin: 4rem 0;
@@ -305,3 +305,10 @@ color: var(--primario);
     gap: 2rem;
   
 }
+
+
+/* pagination */
+.pagination-container h2 {
+    font-size: 1.5rem;
+}
+
